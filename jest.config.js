@@ -1,3 +1,4 @@
+/* eslint-env node */
 module.exports = {
   setupFiles: ["<rootDir>/jest.setup.js"],
   testRegex: "(/__tests__/.*|(\\.|/)(test))\\.(jsx?|tsx?)$",
