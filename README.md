@@ -34,6 +34,12 @@ TODO: Document how a developer can get the repository set up for development.
 
 TODO: Document how a developer can run the tests locally.
 
+We use `Jest` as our test runner. To run the tests:
+
+```bash
+npm test
+```
+
 ## Formatting the code
 
 We use [Prettier](https://prettier.io/) to format our code. There are lots of
