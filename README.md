@@ -16,6 +16,20 @@ TODO: Document how a developer can get the repository set up for development.
 1. Install the version of Node documented in `.node-version`. We recommend using
    [nodenv](https://github.com/nodenv/nodenv) to manage Node versions.
 
+1. Install the required packages:
+
+   ```bash
+   npm install
+   ```
+
+1. Run the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+1. Navigate to [`http://localhost:3000`](http://localhost:3000).
+
 ## Running the tests
 
 TODO: Document how a developer can run the tests locally.

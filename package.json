@@ -2,5 +2,14 @@
   "name": "react-template",
   "version": "0.0.1",
   "private": true,
-  "scripts": {}
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^9.1.1",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
+  }
 }
