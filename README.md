@@ -13,6 +13,9 @@ TODO: Remove this section when all TODOs are resolved.
 
 TODO: Document how a developer can get the repository set up for development.
 
+1. Install the version of Node documented in `.node-version`. We recommend using
+   [nodenv](https://github.com/nodenv/nodenv) to manage Node versions.
+
 ## Running the tests
 
 TODO: Document how a developer can run the tests locally.
