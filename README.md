@@ -34,6 +34,12 @@ TODO: Document how a developer can get the repository set up for development.
 
 TODO: Document how a developer can run the tests locally.
 
+## Formatting the code
+
+We use [Prettier](https://prettier.io/) to format our code. There are lots of
+[editor integrations](https://prettier.io/docs/en/editors.html) available, and
+the style is enforced by a Git pre-commit hook.
+
 ## Architecture decision records
 
 We use ADRs to document architecture decisions that we make. They can be found
