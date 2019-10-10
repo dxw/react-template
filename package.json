@@ -6,7 +6,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "test": "npm run lint:fix && jest",
+    "test": "npm run format && npm run lint:fix && jest",
     "lint": "eslint '**/**.{js,jsx,ts,tsx}'",
     "lint:fix": "npm run lint -- --fix",
     "format": "prettier --write '**/**'"
