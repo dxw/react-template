@@ -5,5 +5,13 @@ exports[`renders correctly 1`] = `
   <h1>
     Welcome to dxw's React template!
   </h1>
+  <style>
+    
+        body {
+          font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+            "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        }
+      
+  </style>
 </div>
 `;
