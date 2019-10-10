@@ -1,3 +1,4 @@
+import Head from "next/head";
 import React, { ReactNode } from "react";
 
 type LayoutProps = {
@@ -5,7 +6,16 @@ type LayoutProps = {
 };
 
 const Layout = ({ children }: LayoutProps): JSX.Element => (
-  <div>{children}</div>
+  <div>
+    <Head>
+      <title>
+        {/* TODO: Replace this with a base title for the app. */}
+        React template
+      </title>
+    </Head>
+
+    {children}
+  </div>
 );
 
 export default Layout;
