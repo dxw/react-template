@@ -2,8 +2,8 @@
 
 exports[`renders correctly 1`] = `
 <div>
-  <h1>
-    Welcome to dxw's React template!
-  </h1>
+  <p>
+    Test content
+  </p>
 </div>
 `;
