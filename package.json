@@ -6,10 +6,13 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "test": "npm run format && npm run lint:fix && jest",
+    "test": "npm run format:check && npm run lint && jest",
+    "test:watch": "npm test -- --watch",
+    "test:update": "npm test -- --updateSnapshot",
     "lint": "eslint '**/**.{js,jsx,ts,tsx}'",
     "lint:fix": "npm run lint -- --fix",
-    "format": "prettier --write '**/**'"
+    "format": "prettier --write '**/**'",
+    "format:check": "prettier --check '**/**'"
   },
   "dependencies": {
     "next": "^9.1.1",
