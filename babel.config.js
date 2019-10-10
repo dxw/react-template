@@ -1,4 +1,4 @@
 /* eslint-env node */
 module.exports = {
-  presets: ["next/babel"]
+  presets: [["next/babel", { "styled-jsx": { "babel-test": true } }]]
 };
