@@ -9,12 +9,19 @@ project.
 
 TODO: Remove this section when all TODOs are resolved.
 
+## Dependencies
+
+TODO: Document any external dependencies required to run the app locally.
+
+- [Node.js](https://nodejs.org/)
+
+  We assume you are using the version of Node.js documented in
+  [`.node-version`](.node-version). We recommend using
+  [nodenv](https://github.com/nodenv/nodenv) to manage Node.js versions.
+
 ## Getting started
 
 TODO: Document how a developer can get the repository set up for development.
-
-1. Install the version of Node documented in `.node-version`. We recommend using
-   [nodenv](https://github.com/nodenv/nodenv) to manage Node versions.
 
 1. Install the required packages:
 
