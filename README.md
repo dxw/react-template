@@ -19,6 +19,10 @@ TODO: Document any external dependencies required to run the app locally.
   [`.node-version`](.node-version). We recommend using
   [nodenv](https://github.com/nodenv/nodenv) to manage Node.js versions.
 
+- Google Chrome of Firefox
+
+  We use these for running feature tests locally.
+
 ## Getting started
 
 TODO: Document how a developer can get the repository set up for development.
@@ -41,11 +45,66 @@ TODO: Document how a developer can get the repository set up for development.
 
 TODO: Document how a developer can run the tests locally.
 
-We use `Jest` as our test runner. To run the tests:
+We use [Jest](https://jestjs.io/) for testing. Feature tests are driven by
+[Selenium Webdriver](https://seleniumhq.github.io/selenium/docs/api/javascript/)
+to test in browser.
+
+To run the unit tests:
+
+```bash
+npm run test:unit
+```
+
+To run the unit tests, updating changed snapshots:
+
+```bash
+npm run test:unit:update
+```
+
+To run the unit tests in watch mode:
+
+```bash
+npm run test:unit:watch
+```
+
+To run the feature tests:
+
+```bash
+npm run test:feature
+```
+
+To run the feature tests, updating changed snapshots:
+
+```bash
+npm run test:feature:update
+```
+
+To run the feature tests in watch mode:
+
+```bash
+npm run test:feature:watch
+```
+
+To run the full test suite:
+
+```bash
+npm run test:all
+```
+
+To run the full test suite, including format checking and linting:
 
 ```bash
 npm test
 ```
+
+### Browser support
+
+We support running the feature tests in Google Chrome and Firefox. By default,
+we run Google Chrome in headless mode.
+
+To run in Firefox, set `TEST_BROWSER=firefox` in your environment.
+
+To run non-headless, set `HEADLESS=0` in your environment.
 
 ## Formatting the code
 

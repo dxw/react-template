@@ -5,7 +5,7 @@ type LayoutProps = {
 };
 
 const Layout = ({ children }: LayoutProps): JSX.Element => (
-  <div>{children}</div>
+  <div data-test="content">{children}</div>
 );
 
 export default Layout;
