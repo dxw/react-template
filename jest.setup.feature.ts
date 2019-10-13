@@ -1,10 +1,13 @@
 /* eslint-env jest */
+import { setJestCucumberConfiguration } from "jest-cucumber";
 import { Browser } from "selenium-webdriver";
 import yn from "yn";
 
 import SingletonWebDriver from "./tests/helpers/webdriver/SingletonWebDriver";
 
 jest.setTimeout(60 * 1000);
+
+setJestCucumberConfiguration({ loadRelativePath: true });
 
 beforeAll(async () => {
   try {
