@@ -3,7 +3,7 @@ import { advanceTo, clear } from "jest-date-mock";
 import React from "react";
 import renderer from "react-test-renderer";
 
-import Document from "./_document";
+import Document from "../../pages/_document";
 
 beforeAll(() => {
   advanceTo(new Date("2019-01-01T00:00:00.000Z"));
