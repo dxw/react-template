@@ -1,0 +1,23 @@
+# TODO: Remove this file if using something other than GitHub Actions for CI.
+name: CI
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js 12.10.0
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.10.0
+      - name: Install, build, and test
+        run: |
+          npm ci
+          npm run build
+          npm test
+        env:
+          CI: true
