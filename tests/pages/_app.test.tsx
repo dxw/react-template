@@ -3,8 +3,8 @@ import { createRouter } from "next/router";
 import React from "react";
 import renderer from "react-test-renderer";
 
-import App from "./_app";
-import Index from "./index";
+import App from "../../pages/_app";
+import Index from "../../pages/index";
 
 it("renders correctly", () => {
   const component = renderer.create(
