@@ -5,11 +5,6 @@ const sharedRulePrettierExtends = ["prettier", "prettier/react"];
 
 module.exports = {
   parser: "@typescript-eslint/parser",
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true
-    }
-  },
   plugins: [...sharedPlugins],
   extends: [...sharedRuleExtends, ...sharedRulePrettierExtends],
   settings: {
