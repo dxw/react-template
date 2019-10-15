@@ -5,6 +5,10 @@ const sharedRulePrettierExtends = ["prettier", "prettier/react"];
 
 module.exports = {
   parser: "@typescript-eslint/parser",
+  parserOptions: {
+    project: ["./tsconfig.json", "./tsconfig.eslint.json"],
+    tsconfigRootDir: __dirname
+  },
   plugins: [...sharedPlugins],
   extends: [...sharedRuleExtends, ...sharedRulePrettierExtends],
   settings: {
