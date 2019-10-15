@@ -16,7 +16,7 @@
     "test:feature:noserver": "jest --config jest.config.feature.js --detectOpenHandles",
     "test:feature:update": "concurrently --names 'server,test' 'npm run dev -- --port 3001' 'wait-for-localhost 3001 && PORT=3001 test:feature:noserver -- --updateSnapshot' --kill-others --success first",
     "test:feature:watch": "concurrently --names 'server,test' 'npm run dev -- --port 3001' 'wait-for-localhost 3001 && PORT=3001 test:feature:noserver -- --watch' --kill-others --success first",
-    "lint": "eslint '**/**.{js,jsx,ts,tsx}'",
+    "lint": "eslint --report-unused-disable-directives --config ./.eslintrc.full.js '**/**.{js,jsx,ts,tsx}'",
     "lint:fix": "npm run lint -- --fix",
     "format": "prettier --write '**/**'",
     "format:check": "prettier --check '**/**'"
