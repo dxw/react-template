@@ -18,7 +18,12 @@
     "**/node_modules/**",
     "**/__tests__/**",
     "**/*.test.ts",
-    "**/*.test.tsx"
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "**/*.steps.ts",
+    "**/*.steps.tsx",
+    "tests/**"
   ],
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
 }
