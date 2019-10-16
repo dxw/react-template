@@ -1,6 +1,6 @@
 /* eslint-env node */
 module.exports = {
-  setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
+  setupFilesAfterEnv: ["jest-axe/extend-expect", "<rootDir>/jest.setup.ts"],
   transform: {
     "^.+\\.tsx?$": "babel-jest"
   },
