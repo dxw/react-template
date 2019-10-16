@@ -8,3 +8,7 @@ Feature: Index page
     When I visit /
     Then the page title should be "React template - Index"
     And I should see "Welcome" on the page
+
+  Scenario: No accessibility violations
+    When I visit /
+    Then the page should be accessible
