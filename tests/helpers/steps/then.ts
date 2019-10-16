@@ -1,3 +1,4 @@
+import { axe } from "jest-axe";
 import { DefineStepFunction } from "jest-cucumber";
 
 import SingletonWebDriver from "../webdriver/SingletonWebDriver";
@@ -17,5 +18,17 @@ export const thenThePageTitleShouldBeX = (then: DefineStepFunction): void => {
     const driver = SingletonWebDriver.get();
 
     await expect(driver.getTitle()).resolves.toEqual(title);
+  });
+};
+
+export const thenThePageShouldBeAccessible = (
+  then: DefineStepFunction
+): void => {
+  then("the page should be accessible", async () => {
+    const driver = SingletonWebDriver.get();
+
+    const document = await driver.getPageSource();
+
+    expect(await axe(document)).toHaveNoViolations();
   });
 };
