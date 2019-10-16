@@ -8,6 +8,13 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        browser:
+          - chrome
+          - firefox
+
     steps:
       - uses: actions/checkout@v1
       - name: Use Node.js 12.10.0
@@ -18,6 +25,6 @@ jobs:
         run: |
           npm ci
           npm run build
-          npm test
+          TEST_BROWSER=${{ matrix.browser }} npm test
         env:
           CI: true
