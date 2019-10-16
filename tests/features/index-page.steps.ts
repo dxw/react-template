@@ -8,7 +8,7 @@ import {
 import { whenIVisitX } from "../helpers/steps/when";
 
 defineFeature(loadFeature("./index-page.feature"), test => {
-  test("Visit /", ({ when, then, and }) => {
+  test("Page has content", ({ when, then, and }) => {
     whenIVisitX(when);
     thenThePageTitleShouldBeX(then);
     thenIShouldSeeXOnThePage(and);
