@@ -109,12 +109,24 @@ npm test
 
 ### Browser support
 
-We support running the feature tests in Google Chrome and Firefox. By default,
-we run Google Chrome in headless mode.
+We support running the feature tests in Google Chrome and Firefox, headless or
+not.
 
-To run in Firefox, set `TEST_BROWSER=firefox` in your environment.
+The following environment variables customize the browser options for testing:
 
-To run non-headless, set `HEADLESS=0` in your environment.
+- `TEST_BROWSER` determines the browser to use.
+
+  Accepted values:
+
+  - `chrome` (default)
+  - `firefox`
+
+- `HEADLESS` determines if we run the browser in headless mode or not.
+
+  Accepted values:
+
+  - `0` for off
+  - `1` for on (default)
 
 ## Formatting the code
 
