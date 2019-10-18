@@ -121,7 +121,7 @@ The following environment variables customize the browser options for testing:
   - `chrome` (default)
   - `firefox`
 
-- `HEADLESS` determines if we run the browser in headless mode or not.
+- `TEST_HEADLESS` determines if we run the browser in headless mode or not.
 
   Accepted values:
 
