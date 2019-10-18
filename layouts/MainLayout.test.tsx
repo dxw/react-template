@@ -2,13 +2,13 @@
 import React from "react";
 import renderer from "react-test-renderer";
 
-import Layout from "./Layout";
+import MainLayout from "./MainLayout";
 
 it("renders correctly", () => {
   const component = renderer.create(
-    <Layout>
+    <MainLayout>
       <p>Test content</p>
-    </Layout>
+    </MainLayout>
   );
 
   expect(component.toJSON()).toMatchSnapshot();
