@@ -17,7 +17,8 @@ This project is built with [TypeScript](https://www.typescriptlang.org/) and
 [Jest](https://jestjs.io/), [Cucumber](https://cucumber.io/), and
 [Selenium WebDriver](https://seleniumhq.github.io/selenium/docs/api/javascript/)
 for building and running tests. We use [ESLint](https://eslint.org/) for linting
-and [Prettier](https://prettier.io/) for code formatting.
+and [Prettier](https://prettier.io/) for code formatting. We use
+[Docker](https://www.docker.com/) to deploy and run the service.
 
 ## Dependencies
 
