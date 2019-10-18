@@ -15,7 +15,7 @@ beforeAll(async () => {
   } catch {
     await SingletonWebDriver.create({
       browser: process.env.TEST_BROWSER || Browser.CHROME,
-      headless: yn(process.env.HEADLESS, { default: true }),
+      headless: yn(process.env.TEST_HEADLESS, { default: true }),
       baseUrl: `http://localhost:${process.env.PORT || 3000}`
     });
   }
