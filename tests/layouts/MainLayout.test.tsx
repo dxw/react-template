@@ -2,7 +2,7 @@
 import React from "react";
 import renderer from "react-test-renderer";
 
-import MainLayout from "./MainLayout";
+import MainLayout from "../../layouts/MainLayout";
 
 it("renders correctly", () => {
   const component = renderer.create(

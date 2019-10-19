@@ -3,7 +3,7 @@ import { setJestCucumberConfiguration } from "jest-cucumber";
 import { Browser } from "selenium-webdriver";
 import yn from "yn";
 
-import SingletonWebDriver from "./tests/helpers/webdriver/SingletonWebDriver";
+import SingletonWebDriver from "./helpers/webdriver/SingletonWebDriver";
 
 jest.setTimeout(60 * 1000);
 
