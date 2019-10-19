@@ -24,10 +24,12 @@ jobs:
       - name: Install, build, and test
         run: |
           npm ci
-          npm run build
-          npm test
+          docker build --tag ${TEST_DOCKER_IMAGE} .
+          npm run test:docker
         env:
           CI: true
+          # TODO: Rename the test docker image.
+          TEST_DOCKER_IMAGE: react-template
           TEST_BROWSER: ${{ matrix.browser }}
       - name: Audit installed packages (info only)
         run: |
