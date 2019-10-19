@@ -1,3 +1,8 @@
+# TODO: Update this to refer to your service.
+# This Dockerfile is part of dxw's React template:
+#   https://github.com/dxw/react-template/
+#
+
 # ------------------------------------------------------------------------------
 # base
 # ------------------------------------------------------------------------------
@@ -11,6 +16,7 @@ WORKDIR /app
 ENV NODE_ENV production
 ENV PORT 3000
 
+COPY Dockerfile /app/Dockerfile
 COPY LICENCE /app/LICENCE
 COPY README.md /app/README.md
 
