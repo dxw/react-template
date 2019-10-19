@@ -129,6 +129,36 @@ The following environment variables customize the browser options for testing:
   - `0` for off
   - `1` for on **(default)**
 
+### Docker support
+
+We support running the feature tests against a Docker image instead of a local
+server. Note that everything other than the feature tests that use Selenium
+WebDriver will always run on the host system.
+
+The following environment variables customize the Docker options for testing:
+
+- `TEST_DOCKER_IMAGE` **(required)** determines the Docker image to run against.
+
+  You must have already built or pulled the image.
+
+To run the feature tests:
+
+```bash
+npm run test:feature:docker
+```
+
+To run the full test suite:
+
+```bash
+npm run test:all:docker
+```
+
+To run the full test suite, including format checking and linting:
+
+```bash
+npm run test:docker
+```
+
 ## Formatting the code
 
 We use [Prettier](https://prettier.io/) to format our code. There are lots of
