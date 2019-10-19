@@ -26,8 +26,6 @@ We use:
 
 ## Dependencies
 
-TODO: Document any external dependencies required to run the app locally.
-
 - [Node.js](https://nodejs.org/)
 
   We assume you are using the version of Node.js documented in
@@ -39,8 +37,6 @@ TODO: Document any external dependencies required to run the app locally.
   We use these for running feature tests locally.
 
 ## Getting started
-
-TODO: Document how a developer can get the repository set up for development.
 
 1. Install the required packages:
 
@@ -57,8 +53,6 @@ TODO: Document how a developer can get the repository set up for development.
 1. Navigate to [`http://localhost:3000`](http://localhost:3000).
 
 ## Running the tests
-
-TODO: Document how a developer can run the tests locally.
 
 We use [Jest](https://jestjs.io/) for testing. Feature tests are driven by
 [Selenium Webdriver](https://seleniumhq.github.io/selenium/docs/api/javascript/)
