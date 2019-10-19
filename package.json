@@ -16,7 +16,7 @@
     "test:unit:watch": "npm run test:unit -- --watch",
     "test:feature": "concurrently --names 'server,test' 'npm run dev -- --port 3001' 'wait-for-localhost 3001 && PORT=3001 npm run test:feature:noserver' --kill-others --success first",
     "test:feature:docker": "concurrently --names 'docker,test' 'docker run --rm --publish 3001:3000 ${TEST_DOCKER_IMAGE}' 'wait-for-localhost 3001 && PORT=3001 npm run test:feature:noserver' --kill-others --success first",
-    "test:feature:noserver": "jest --config jest.config.feature.js --detectOpenHandles",
+    "test:feature:noserver": "jest --config jest.config.feature.js --detectOpenHandles --runInBand",
     "test:feature:update": "concurrently --names 'server,test' 'npm run dev -- --port 3001' 'wait-for-localhost 3001 && PORT=3001 npm run test:feature:noserver -- --updateSnapshot' --kill-others --success first",
     "test:feature:watch": "concurrently --names 'server,test' 'npm run dev -- --port 3001' 'wait-for-localhost 3001 && PORT=3001 npm run test:feature:noserver -- --watch' --kill-others --success first",
     "lint": "eslint --report-unused-disable-directives --config ./.eslintrc.full.js '**/**.{js,jsx,ts,tsx}'",
