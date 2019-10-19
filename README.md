@@ -12,13 +12,17 @@ TODO: Remove this section when all TODOs are resolved.
 ## Technical overview
 
 This project is built with [TypeScript](https://www.typescriptlang.org/) and
-[Next.js](https://nextjs.org/). We use
-[`styled-jsx`](https://github.com/zeit/styled-jsx) for styling components and
-[Jest](https://jestjs.io/), [Cucumber](https://cucumber.io/), and
-[Selenium WebDriver](https://seleniumhq.github.io/selenium/docs/api/javascript/)
-for building and running tests. We use [ESLint](https://eslint.org/) for linting
-and [Prettier](https://prettier.io/) for code formatting. We use
-[Docker](https://www.docker.com/) to deploy and run the service.
+[Next.js](https://nextjs.org/).
+
+We use:
+
+- [`styled-jsx`](https://github.com/zeit/styled-jsx) for styling components
+- [Docker](https://www.docker.com/) to deploy and run the service
+- [Jest](https://jestjs.io/), [Cucumber](https://cucumber.io/), and
+  [Selenium WebDriver](https://seleniumhq.github.io/selenium/docs/api/javascript/)
+  for building and running tests
+- [ESLint](https://eslint.org/) for linting
+- [Prettier](https://prettier.io/) for code formatting
 
 ## Dependencies
 
