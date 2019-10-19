@@ -9,7 +9,7 @@ jest.setTimeout(60 * 1000);
 
 setJestCucumberConfiguration({ loadRelativePath: true });
 
-beforeAll(async () => {
+beforeEach(async () => {
   try {
     SingletonWebDriver.get();
   } catch {
@@ -21,6 +21,6 @@ beforeAll(async () => {
   }
 });
 
-afterAll(async () => {
+afterEach(async () => {
   await SingletonWebDriver.quit();
 });
