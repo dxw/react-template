@@ -4,6 +4,10 @@ module.exports = {
   transform: {
     "^.+\\.tsx?$": "babel-jest"
   },
+  testMatch: [
+    "**/__tests__/**/*.[jt]s?(x)",
+    "**/?(*.)+(spec|steps|test).[jt]s?(x)"
+  ],
   testPathIgnorePatterns: [
     "<rootDir>/.next/",
     "<rootDir>/node_modules/",

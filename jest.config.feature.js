@@ -8,6 +8,8 @@ module.exports = {
   transform: {
     "^.+\\.tsx?$": "babel-jest"
   },
-  testMatch: ["<rootDir>/tests/features/**/*.{js,jsx,ts,tsx}"],
+  testMatch: [
+    "<rootDir>/tests/features/**/*.{spec,steps,test}.{js,jsx,ts,tsx}"
+  ],
   moduleFileExtensions: ["js", "jsx", "ts", "tsx"]
 };
