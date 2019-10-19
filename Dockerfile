@@ -16,13 +16,6 @@ WORKDIR /app
 ENV NODE_ENV production
 ENV PORT 3000
 
-COPY Dockerfile /app/Dockerfile
-COPY LICENCE /app/LICENCE
-COPY README.md /app/README.md
-
-COPY package.json /app/package.json
-COPY package-lock.json /app/package-lock.json
-
 # ------------------------------------------------------------------------------
 # dependencies
 # ------------------------------------------------------------------------------
@@ -30,6 +23,9 @@ COPY package-lock.json /app/package-lock.json
 FROM base AS dependencies
 
 RUN apk add --no-cache git openssh
+
+COPY package.json /app/package.json
+COPY package-lock.json /app/package-lock.json
 
 RUN npm ci
 
@@ -50,6 +46,13 @@ RUN npm run build
 # ------------------------------------------------------------------------------
 
 FROM base AS app
+
+COPY Dockerfile /app/Dockerfile
+COPY LICENCE /app/LICENCE
+COPY README.md /app/README.md
+
+COPY package.json /app/package.json
+COPY package-lock.json /app/package-lock.json
 
 COPY --from=dependencies /app/node_modules /app/node_modules
 COPY --from=build /app/.next /app/.next
