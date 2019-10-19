@@ -25,6 +25,10 @@ jobs:
         run: |
           npm ci
           npm run build
-          TEST_BROWSER=${{ matrix.browser }} npm test
+          npm test
         env:
           CI: true
+          TEST_BROWSER: ${{ matrix.browser }}
+      - name: Audit installed packages (info only)
+        run: |
+          npm audit || true
