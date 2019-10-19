@@ -1,6 +1,8 @@
-/* eslint-disable @typescript-eslint/camelcase*/
+/* eslint-disable @typescript-eslint/camelcase */
 import {
   Actions,
+  Browser,
+  Builder,
   Capabilities,
   FileDetector,
   Locator,
@@ -13,10 +15,39 @@ import {
   WebElementCondition,
   WebElementPromise
 } from "selenium-webdriver";
+import chrome from "selenium-webdriver/chrome";
+import firefox from "selenium-webdriver/firefox";
 import { Executor } from "selenium-webdriver/http";
 import { Command } from "selenium-webdriver/lib/command";
 
+type WebDriverWrapperCreateOptions = {
+  browser?: string;
+  headless?: boolean;
+  baseUrl?: string;
+};
+
 class WebDriverWrapper implements WebDriver {
+  static async create({
+    browser = Browser.CHROME,
+    headless = true,
+    baseUrl
+  }: WebDriverWrapperCreateOptions = {}): Promise<WebDriverWrapper> {
+    const chromeOptions = new chrome.Options();
+    const firefoxOptions = new firefox.Options();
+
+    if (headless) {
+      chromeOptions.addArguments("--headless", "--disable-gpu");
+      firefoxOptions.headless();
+    }
+
+    const builder = new Builder()
+      .forBrowser(browser)
+      .setChromeOptions(chromeOptions)
+      .setFirefoxOptions(firefoxOptions);
+
+    return new this(await builder.build(), baseUrl);
+  }
+
   readonly driver: WebDriver;
   readonly baseUrl?: string;
 
