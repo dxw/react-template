@@ -2,15 +2,15 @@
 module.exports = {
   setupFilesAfterEnv: [
     "jest-axe/extend-expect",
-    "<rootDir>/tests/jest.setup.ts"
+    "<rootDir>/__tests__/jest.setup.ts"
   ],
   moduleNameMapper: {
-    "^.+\\.css$": "<rootDir>/tests/helpers/transformers/fileTransformer"
+    "^.+\\.css$": "<rootDir>/__tests__/helpers/transformers/fileTransformer"
   },
   transform: {
     "^.+\\.tsx?$": "babel-jest"
   },
-  testMatch: ["<rootDir>/tests/**/?(*.)+(spec|steps|test).[jt]s?(x)"],
-  testPathIgnorePatterns: ["<rootDir>/tests/features/"],
+  testMatch: ["<rootDir>/__tests__/**/?(*.)+(spec|steps|test).[jt]s?(x)"],
+  testPathIgnorePatterns: ["<rootDir>/__tests__/features/"],
   moduleFileExtensions: ["js", "jsx", "ts", "tsx"]
 };
