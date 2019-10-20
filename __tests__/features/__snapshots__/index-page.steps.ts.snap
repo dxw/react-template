@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Index page Page has content 1`] = `
+"<h1>Welcome to dxw's React template!</h1>
+"
+`;
+
+exports[`Index page Page has no accessibility violations 1`] = `
+"<h1>Welcome to dxw's React template!</h1>
+"
+`;

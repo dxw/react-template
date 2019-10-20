@@ -36,9 +36,14 @@ We use:
   [`node-build-update-defs`](https://github.com/nodenv/node-build-update-defs)
   to manage Node.js versions.
 
-- Google Chrome or Firefox
+- Google Chrome
 
-  We use these for running feature tests locally.
+  We use this by default for running feature tests. It's the browser we use for
+  snapshot testing.
+
+- Firefox **(optional)**
+
+  We support this as another target for running feature tests.
 
 ## Getting started
 
@@ -126,7 +131,7 @@ npm run test:update
 ### Browser support
 
 We support running the feature tests in Google Chrome and Firefox, headless or
-not.
+not. Post-feature snapshot tests only run when using Google Chrome.
 
 The following environment variables customize the browser options for testing:
 
