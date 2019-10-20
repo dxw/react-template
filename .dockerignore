@@ -9,6 +9,7 @@
 !/Dockerfile
 !/LICENCE
 !/next-env.d.ts
+!/next.config.js
 !/package-lock.json
 !/package.json
 !/README.md
