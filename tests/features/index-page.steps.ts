@@ -1,22 +1,18 @@
 /* eslint-env jest */
 import { defineFeature, loadFeature } from "jest-cucumber";
 
-import {
-  thenIShouldSeeXOnThePage,
-  thenThePageShouldBeAccessible,
-  thenThePageTitleShouldBeX
-} from "../helpers/steps/then";
-import { whenIVisitX } from "../helpers/steps/when";
+import Then from "../helpers/steps/Then";
+import When from "../helpers/steps/When";
 
 defineFeature(loadFeature("./index-page.feature"), test => {
   test("Page has content", ({ when, then, and }) => {
-    whenIVisitX(when);
-    thenThePageTitleShouldBeX(then);
-    thenIShouldSeeXOnThePage(and);
+    When.iVisitX(when);
+    Then.thePageTitleShouldBeX(then);
+    Then.iShouldSeeXOnThePage(and);
   });
 
-  test("No accessibility violations", ({ when, then }) => {
-    whenIVisitX(when);
-    thenThePageShouldBeAccessible(then);
+  test("Page has no accessibility violations", ({ when, then }) => {
+    When.iVisitX(when);
+    Then.thePageShouldBeAccessible(then);
   });
 });
