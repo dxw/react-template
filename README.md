@@ -17,6 +17,8 @@ This project is built with [TypeScript](https://www.typescriptlang.org/) and
 We use:
 
 - [`styled-jsx`](https://github.com/zeit/styled-jsx) for styling components
+- [Normalize.css](http://necolas.github.io/normalize.css/) to normalize styles
+  across browsers
 - [Docker](https://www.docker.com/) to deploy and run the service
 - [Jest](https://jestjs.io/), [Cucumber](https://cucumber.io/), and
   [Selenium WebDriver](https://seleniumhq.github.io/selenium/docs/api/javascript/)
