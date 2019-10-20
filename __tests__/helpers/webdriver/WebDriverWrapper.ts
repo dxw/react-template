@@ -20,20 +20,30 @@ import firefox from "selenium-webdriver/firefox";
 import { Executor } from "selenium-webdriver/http";
 import { Command } from "selenium-webdriver/lib/command";
 
-type WebDriverWrapperCreateOptions = {
+export type WindowSize = { width: number; height: number };
+
+export type WebDriverWrapperCreateOptions = {
   browser?: string;
   headless?: boolean;
   baseUrl?: string;
+  enabledSnapshotBrowsers?: string[];
+  windowSize?: WindowSize;
+};
+
+export type WebDriverWrapperOptions = {
+  browser: string;
+  baseUrl?: string;
+  enabledSnapshotBrowsers?: string[];
 };
 
 class WebDriverWrapper implements WebDriver {
   static async create({
     browser = Browser.CHROME,
     headless = true,
-    baseUrl
+    baseUrl,
+    enabledSnapshotBrowsers,
+    windowSize = { width: 1280, height: 720 }
   }: WebDriverWrapperCreateOptions = {}): Promise<WebDriverWrapper> {
-    const windowSize = { width: 1280, height: 720 };
-
     const chromeOptions = new chrome.Options().windowSize(windowSize);
     const firefoxOptions = new firefox.Options().windowSize(windowSize);
 
@@ -47,15 +57,30 @@ class WebDriverWrapper implements WebDriver {
       .setChromeOptions(chromeOptions)
       .setFirefoxOptions(firefoxOptions);
 
-    return new this(await builder.build(), baseUrl);
+    return new this(await builder.build(), {
+      browser,
+      baseUrl,
+      enabledSnapshotBrowsers
+    });
   }
 
   readonly driver: WebDriver;
+  readonly browser: string;
   readonly baseUrl?: string;
+  readonly enabledSnapshotBrowsers: string[];
 
-  constructor(driver: WebDriver, baseUrl?: string) {
+  constructor(
+    driver: WebDriver,
+    {
+      browser,
+      baseUrl,
+      enabledSnapshotBrowsers = [Browser.CHROME]
+    }: WebDriverWrapperOptions
+  ) {
     this.driver = driver;
+    this.browser = browser;
     this.baseUrl = baseUrl;
+    this.enabledSnapshotBrowsers = enabledSnapshotBrowsers;
   }
 
   async getRelative(relativeUrl: string): Promise<void> {
@@ -66,6 +91,24 @@ class WebDriverWrapper implements WebDriver {
     const url = new URL(relativeUrl, this.baseUrl).href;
 
     return this.get(url);
+  }
+
+  async getWindowWidth(): Promise<number> {
+    const windowRect = await this.manage()
+      .window()
+      .getRect();
+
+    return windowRect.width;
+  }
+
+  async takeScreenshotAsBuffer(): Promise<Buffer> {
+    const screenshot = await this.driver.takeScreenshot();
+
+    return Buffer.from(screenshot, "base64");
+  }
+
+  isSnapshotTestingEnabled(): boolean {
+    return this.enabledSnapshotBrowsers.includes(this.browser);
   }
 
   /* WebDriver methods */
