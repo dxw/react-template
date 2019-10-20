@@ -32,11 +32,13 @@ class WebDriverWrapper implements WebDriver {
     headless = true,
     baseUrl
   }: WebDriverWrapperCreateOptions = {}): Promise<WebDriverWrapper> {
-    const chromeOptions = new chrome.Options();
-    const firefoxOptions = new firefox.Options();
+    const windowSize = { width: 1280, height: 720 };
+
+    const chromeOptions = new chrome.Options().windowSize(windowSize);
+    const firefoxOptions = new firefox.Options().windowSize(windowSize);
 
     if (headless) {
-      chromeOptions.addArguments("--headless", "--disable-gpu");
+      chromeOptions.headless();
       firefoxOptions.headless();
     }
 
