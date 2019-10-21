@@ -37,7 +37,7 @@
     "@types/react-test-renderer": "^16.9.1",
     "@types/selenium-webdriver": "^4.0.5",
     "@types/styled-jsx": "^2.2.8",
-    "@typescript-eslint/eslint-plugin": "^2.3.3",
+    "@typescript-eslint/eslint-plugin": "^2.4.0",
     "@typescript-eslint/parser": "^2.4.0",
     "@zeit/next-css": "^1.0.1",
     "babel-core": "^6.26.3",
