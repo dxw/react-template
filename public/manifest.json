@@ -1,0 +1,11 @@
+{
+  // TODO: Update this manifest to match your service.
+  //       See: https://developers.google.com/web/fundamentals/web-app-manifest/
+  "short_name": "react-template",
+  "name": "react-template",
+  "icons": [],
+  "start_url": "/",
+  "background_color": "#FFFFFF",
+  "display": "browser",
+  "theme_color": "#FFFFFF"
+}

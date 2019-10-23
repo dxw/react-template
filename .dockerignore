@@ -13,4 +13,5 @@
 !/package-lock.json
 !/package.json
 !/README.md
+!/server.js
 !/tsconfig.json

@@ -46,10 +46,10 @@ We use:
    npm install
    ```
 
-1. Run the development server:
+1. Run the server:
 
    ```bash
-   npm run dev
+   npm start
    ```
 
 1. Navigate to [`http://localhost:3000`](http://localhost:3000).
