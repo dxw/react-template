@@ -3,6 +3,7 @@
 !/helpers/
 !/layouts/
 !/pages/
+!/public/
 !/types/
 !/babel.config.js
 !/Dockerfile

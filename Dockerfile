@@ -56,6 +56,7 @@ COPY package-lock.json /app/package-lock.json
 
 COPY --from=dependencies /app/node_modules /app/node_modules
 COPY --from=build /app/.next /app/.next
+COPY --from=build /app/public /app/public
 
 EXPOSE 3000
 
