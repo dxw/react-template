@@ -15,7 +15,7 @@ class Then {
     then("the page should be accessible", async () => {
       const document = await browser!.getPageSource();
 
-      expect(await axe(document)).toHaveNoViolations();
+      await expect(axe(document)).resolves.toHaveNoViolations();
     });
   }
 
