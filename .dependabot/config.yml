@@ -7,6 +7,10 @@ update_configs:
       - match:
           dependency_type: all
           update_type: all
+    ignored_updates:
+      - match:
+          dependency_name: node
+          version_requirement: ">= 13.a, < 14"
 
   - package_manager: javascript
     directory: /
