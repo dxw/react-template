@@ -32,7 +32,9 @@ We use:
 
   We assume you are using the version of Node.js documented in
   [`.node-version`](.node-version). We recommend using
-  [nodenv](https://github.com/nodenv/nodenv) to manage Node.js versions.
+  [`nodenv`](https://github.com/nodenv/nodenv) with
+  [`node-build-update-defs`](https://github.com/nodenv/node-build-update-defs)
+  to manage Node.js versions.
 
 - Google Chrome or Firefox
 
