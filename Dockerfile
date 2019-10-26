@@ -7,7 +7,7 @@
 # base
 # ------------------------------------------------------------------------------
 
-FROM node:12.10.0-alpine AS base
+FROM node:13.0.1-alpine AS base
 
 RUN apk add --no-cache bash
 
