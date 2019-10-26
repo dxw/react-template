@@ -34,9 +34,14 @@ We use:
   [`.node-version`](.node-version). We recommend using
   [nodenv](https://github.com/nodenv/nodenv) to manage Node.js versions.
 
-- Google Chrome or Firefox
+- Google Chrome
 
-  We use these for running feature tests locally.
+  We use this by default for running feature tests. It's the primary browser we
+  use for image based regression testing.
+
+- Firefox **(optional)**
+
+  We support this as another target for running feature tests.
 
 ## Getting started
 
@@ -128,6 +133,24 @@ The following environment variables customize the browser options for testing:
 
   - `0` for off
   - `1` for on **(default)**
+
+- `TEST_FEATURE_SNAPSHOTS` determines if we run snapshot tests for the features.
+
+  Accepted values:
+
+  - `0` for off
+  - `1` for on **(default)**
+
+- `TEST_FEATURE_SNAPSHOT_BROWSERS` determines which browsers are enabled for
+  image snapshot testing.
+
+  Accepted values:
+
+  - A comma separated list of browsers
+
+    For example `chrome,firefox`
+
+    Defaults to `chrome`
 
 ### Docker support
 
