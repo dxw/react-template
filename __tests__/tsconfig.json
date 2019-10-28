@@ -1,5 +1,9 @@
 {
   "extends": "../tsconfig.json",
-  "exclude": ["../**/node_modules/**/*"],
-  "include": ["../**/*"]
+  "compilerOptions": {
+    "module": "commonjs",
+    "jsx": "react"
+  },
+  "include": ["../**/*"],
+  "exclude": ["../**/node_modules/**/*"]
 }

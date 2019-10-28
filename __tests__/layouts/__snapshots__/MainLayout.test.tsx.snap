@@ -5,7 +5,10 @@ Array [
   <p>
     Test content
   </p>,
-  <style>
+  <style
+    global={true}
+    jsx={true}
+  >
     
         body {
           font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
