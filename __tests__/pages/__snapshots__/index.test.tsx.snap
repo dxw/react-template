@@ -5,7 +5,10 @@ Array [
   <h1>
     Welcome to dxw's React template!
   </h1>,
-  <style>
+  <style
+    global={true}
+    jsx={true}
+  >
     
         body {
           font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
