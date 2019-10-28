@@ -14,7 +14,6 @@ RUN apk add --no-cache bash
 WORKDIR /app
 
 ENV NODE_ENV production
-ENV PORT 3000
 
 # ------------------------------------------------------------------------------
 # dependencies
