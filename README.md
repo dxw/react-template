@@ -104,10 +104,23 @@ To run the full test suite:
 npm run test:all
 ```
 
+To run the full test suite, updating changed snapshots:
+
+```bash
+npm run test:all:update
+```
+
 To run the full test suite, including format checking and linting:
 
 ```bash
 npm test
+```
+
+To run the full test suite, including format checking and linting, fixing any
+issues and updating snapshots:
+
+```bash
+npm run test:update
 ```
 
 ### Browser support
