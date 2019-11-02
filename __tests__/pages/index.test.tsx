@@ -2,10 +2,10 @@
 import React from "react";
 import { create } from "react-test-renderer";
 
-import Index from "../../pages/index";
+import IndexPage from "../../pages/index";
 
 it("renders correctly", () => {
-  const component = create(<Index />);
+  const component = create(<IndexPage />);
 
   expect(component.toJSON()).toMatchSnapshot();
 });

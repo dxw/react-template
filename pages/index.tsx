@@ -5,7 +5,7 @@ import React from "react";
 import MainLayout from "../layouts/MainLayout";
 
 // TODO: Replace this with a real index page.
-const Index: NextPage = () => (
+const IndexPage: NextPage = () => (
   <MainLayout>
     <Head>
       <title>React template - Index</title>
@@ -15,4 +15,4 @@ const Index: NextPage = () => (
   </MainLayout>
 );
 
-export default Index;
+export default IndexPage;
