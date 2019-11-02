@@ -1,4 +1,3 @@
-/* eslint-env jest */
 import { defineFeature, loadFeature } from "jest-cucumber";
 
 import Then from "../helpers/steps/Then";

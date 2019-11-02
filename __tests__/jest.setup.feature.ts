@@ -1,4 +1,3 @@
-/* eslint-env jest */
 import { setJestCucumberConfiguration } from "jest-cucumber";
 import { Browser } from "selenium-webdriver";
 import yn from "yn";
