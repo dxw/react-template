@@ -1,11 +1,11 @@
 /* eslint-env jest */
 import React from "react";
-import renderer from "react-test-renderer";
+import { create } from "react-test-renderer";
 
 import MainLayout from "../../layouts/MainLayout";
 
 it("renders correctly", () => {
-  const component = renderer.create(
+  const component = create(
     <MainLayout>
       <p>Test content</p>
     </MainLayout>
