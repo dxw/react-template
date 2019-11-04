@@ -1,12 +1,12 @@
 import Head from "next/head";
-import React, { Fragment, ReactNode } from "react";
+import React, { ReactNode } from "react";
 
 type LayoutProps = {
   children: ReactNode;
 };
 
 const MainLayout = ({ children }: LayoutProps): JSX.Element => (
-  <Fragment>
+  <>
     <Head>
       <title>
         {/* TODO: Replace this with the base title for the service. */}
@@ -25,7 +25,7 @@ const MainLayout = ({ children }: LayoutProps): JSX.Element => (
         }
       `}
     </style>
-  </Fragment>
+  </>
 );
 
 export default MainLayout;
