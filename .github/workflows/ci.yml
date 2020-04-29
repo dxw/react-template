@@ -35,8 +35,6 @@ jobs:
             && sudo mv chromedriver /usr/local/bin/chromedriver \
             && sudo chmod +x /usr/local/bin/chromedriver \
             && chromedriver --version \
-            && which chromedriver \
-            && CHROMEDRIVER_FILEPATH=/usr/local/bin/chromedriver
 
       - name: Use Node.js 12.13.0
         uses: actions/setup-node@v1
